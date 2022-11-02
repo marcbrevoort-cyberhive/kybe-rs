@@ -80,3 +80,14 @@ pub const fn kyber768pke() -> PKE<256, 3> {
 pub const fn kyber768kem() -> KEM<256, 3> {
     KEM::<256, 3>::init(kyber768pke(), 164, 1184, 2400, 1088)
 }
+
+/// Instantiate the Tweaked Kyber 768 PKE with the appropriate parameters
+pub const fn tkyber768pke() -> PKE<256, 3> {
+    PKE::<256, 3>::init(3329, 2, 9, 3)
+}
+
+/// Instantiate the Tweaked Kyber 768 KEM with the appropriate parameters
+pub const fn tkyber768kem() -> KEM<256, 3> {
+    KEM::<256, 3>::init(tkyber768pke(), 164, 1184, 2400, 1088)
+}
+
